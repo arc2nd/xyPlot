@@ -1,0 +1,301 @@
+Aluminum
+Start Values:
+    8cm long
+    4mm wide
+    0.003 inches thick
+End Values:
+~ 50N
+
+Plastic
+Start Values:
+    8cm long
+    4mm wide
+    0.015 inches thick
+End Values:
+    67N
+    53.7 mm
+EV2:
+    ~63N
+    52.415 mm
+
+Steel
+Start Values:
+    8cmm long
+    4mm wide
+    0.003 inches thick
+End Values:
+
+iPod Wire
+Start Values:
+    1.2mm "thin"
+    2.0mm "thick"
+    7cm long
+End Values:
+    "thin"
+        100N at 7mm (wire break)
+        14N at 45mm (casing break)
+    "thick"
+        225N at 8mm
+        22N at 64.4mm
+
+
+
+Aluminum 1
+
+2.05 0N at 0mm
+2.10 3.74N at 0.020mm
+2.15 7.93N at 0.042mm
+2.20 23.83N at 0.127mm
+2.25 30.43N at 0.170mm
+2.30 36.38N at 0.222mm
+2.35 43.08N at 0.318mm
+2.40 51.22N at 0.683mm
+2.45 52.71N at 1.163mm
+2.49 52.49N at 1.730mm (break)
+
+Aluminum 2
+
+1.25 0N at 0mm
+1.30 5.42N at 0.031mm
+1.35 20.71N at 0.109mm
+1.40 29.73N at 0.161mm
+1.45 38.63 at 0.233mm
+1.50 43.98N at 0.285mm
+1.55 44.64N at 0.383mm
+2.00 51.68N at 0.690mm
+2.05 53.43N at 1.376mm
+2.07 53.13N at 1.683m
+
+Steel
+
+0.58 2.63N at 0.007mm
+1.05 20.82N at 0.050mm
+1.10 30.67N at 0.074mm
+1.15 35.48N at 0.085mm
+1.20 44.05N at 0.105mm
+1.25 44.66N at 0.107mm
+1.30 52.71N at 0.125mm
+1.35 61.83N at 0.147mm
+1.40 70.86N at 0.168mm
+1.45 75.30N at 0.179mm
+1.50 78.67N at 0.187mm
+1.55 82.22N at 0.200mm
+2.00 92.48N at 0.212mm
+2.05 92.56N at 0.221mm
+2.10 105.56N at 0.253mm
+2.15 109.24N at 0.263mm
+2.20 115.83N at 0.282mm
+2.25 122.01N at 0.296mm
+2.30 129.13N at 0.315mm
+2.35 129.10N at 0.316mm
+2.40 136.06N at 0.335mm
+2.45 135.78N at 0.335mm
+2.50 152.50N at 0.381mm
+2.55 160.82N at 0.410mm
+3.00 160.13N at 0.411mm
+3.05 168.12N at 0.434mm
+3.10 173.49N at 0.455mm
+3.15 180.81N at 0.483mm
+3.20 188.19N at 0.505mm
+3.25 186.22N at 0.506mm
+3.30 185.75N at 0.507mm
+3.35 199.82N at 0.571mm
+3.40 205.89N at 0.603mm
+3.45 210.84N at 0.632mm
+3.50 217.45N at 0.676mm
+3.55 215.28N at 0.676mm
+4.00 233.67N at 0.837mm
+4.05 237.90N at 1.187mm
+4.10 237.68N at 2.670mm
+
+Plastic 1
+
+1.20 1.39N at 0.042mm
+1.25 4.67N at 0.117mm
+1.30 18.57N at 0.445mm
+1.35 34.65N at 0.816mm
+1.40 41.21N at 1.002mm
+1.45 45.08N at 1.127mm
+1.50 49.53N at 1.270mm
+1.55 59.94N at 1.642mm
+2.00 67.36N at 2.002mm
+2.05 69.55N at 2.156mm
+2.10 74.65N at 2.522mm
+2.15 80.30N at 3.038mm
+2.20 84.47N at 3.636mm
+2.25 87.37N at 4.342mm
+2.30 87.70N at 5.547mm
+2.35 85.06N at 6.944mm
+2.40 71.45N at 9.334mm
+2.45 34.02N at 12.433mm
+2.50 73.22N at 15.597mm
+2.55 74.38N at 19.193mm
+3.00 74.96N at 23.121mm
+3.05 75.84N at 26.818mm
+3.10 76.88N at 31.366mm
+3.15 77.42N at 35.259mm
+3.20 77.80N at 40.051mm
+3.25 77.93N at 44.371mm
+3.30 79.11N at 50.289mm
+3.35 79.23N at 53.729mm
+
+Plastic 2
+
+0.54 3.77N at 0.106mm
+1.00 13.32N at 0.317mm
+1.05 22.35N at 0.543mm
+1.10 28.96N at 0.687mm
+1.15 42.45N at 1.049mm
+1.20 50.03N at 1.271mm
+1.25 59.02N at 1.576mm
+1.30 61.77N at 1.702mm
+1.35 65.56N at 1.862mm
+1.40 72.87N at 2.223mm
+1.45 87.10N at 3.569mm
+1.50 90.09N at 4.410mm
+1.55 91.13N at 5.292mm
+2.00 90.03N at 6.632mm
+2.05 77.68N at 8.631mm
+2.10 75.12N at 11.805mm
+2.15 76.53N at 15.162mm
+2.20 77.30N at 18.352mm
+2.25 78.13N at 22.299mm
+2.30 77.94N at 26.210mm
+2.35 77.94N at 30.197mm
+2.40 78.18N at 34.160mm
+2.45 78.16N at 38.973mm
+2.50 78.74N at 44.709mm
+2.55 78.76N at 49.537mm
+3.00 75.62N at 53.415mm
+
+iPod Wire - "thin"
+
+Plastic 2
+
+0.54 3.77N at 0.106mm
+1.00 13.32N at 0.317mm
+1.05 22.35N at 0.543mm
+1.10 28.96N at 0.687mm
+1.15 42.45N at 1.049mm
+1.20 50.03N at 1.271mm
+1.25 59.02N at 1.576mm
+1.30 61.77N at 1.702mm
+1.35 65.56N at 1.862mm
+1.40 72.87N at 2.223mm
+1.45 87.10N at 3.569mm
+1.50 90.09N at 4.410mm
+1.55 91.13N at 5.292mm
+2.00 90.03N at 6.632mm
+2.05 77.68N at 8.631mm
+2.10 75.12N at 11.805mm
+2.15 76.53N at 15.162mm
+2.20 77.30N at 18.352mm
+2.25 78.13N at 22.299mm
+2.30 77.94N at 26.210mm
+2.35 77.94N at 30.197mm
+2.40 78.18N at 34.160mm
+2.45 78.16N at 38.973mm
+2.50 78.74N at 44.709mm
+2.55 78.76N at 49.537mm
+3.00 75.62N at 53.415mm
+
+iPod Wire - "thin"
+
+1.12 0.05N at 0.001mm
+1.15 0.03N at 0.001mm
+1.20 0.05N at 0.001mm
+1.25 0.05N at 0.001mm
+1.30 0.04N at 0.001mm
+1.35 0.20N at 0.009mm
+1.40 5.66N at 0.253mm
+1.45 19.91N at 0.569mm
+1.50 28.37N at 0.727mm
+1.55 42.75N at 0.974mm
+2.00 49.59N at 1.101mm
+2.05 54.07N at 1.180mm
+2.10 58.09N at 1.279mm
+2.15 67.56N at 1.406mm
+2.20 72.40N at 1.491mm
+2.25 74.79N at 1.563mm
+2.30 86.87N at 1.712mm
+2.35 84.11N at 1.735mm
+2.40 93.10N at 1.871mm
+2.45 97.99N at 2.020mm (wire break)
+2.50 5.74N at 5.001mm
+2.55 5.03N at 12.347mm
+3.00 7.34N at 18.516mm
+3.05 8.93N at 23.823mm
+3.10 11.00N at 31.553mm
+3.15 12.55N at 38.835mm
+3.20 13.87N at 45.607mm
+3.21 14.09N at 47.070mm
+3.22 13.94N at 48.572mm (plastic break)
+
+iPos Wire - "thick"
+
+3.22 13.94N at 48.572mm (plastic break)
+
+iPos Wire - "thick"
+
+3.22 13.94N at 48.572mm (plastic break)
+
+iPod Wire - "thick"
+
+1.00 1.95N at 0.095mm
+1.05 14.14N at 0.370mm
+1.10 23.65N at 0.507mm
+1.15 34.20N at 0.640mm
+1.20 44.19N at 0.742mm
+1.25 47.71N at 0.796mm
+1.30 55.65N at 0.869mm
+1.35 62.08N at 0.941mm
+1.40 71.64N at 1.026mm
+1.45 76.00N at 1.090mm
+1.50 84.73N at 1.187mm
+1.55 87.59N at 1.237mm
+2.00 92.07N at 1.264mm
+2.05 101.41N at 1.386mm
+2.10 101.63N at 1.408mm
+2.15 112.65N at 1.504mm
+2.20 116.81N at 1.556mm
+2.25 115.85N at 1.578mm
+2.30 128.62N at 1.692mm
+2.35 135.26N at 1.767mm
+2.40 139.39N at 1.827mm
+2.45 155.13N at 1.974mm
+2.50 148.34N at 1.975mm
+2.55 167.10N at 2.124mm
+3.00 163.52N at 2.148mm
+3.05 177.10N at 2.273mm
+3.10 179.28N at 2.318mm
+3.15 185.09N at 2.420mm
+3.20 187.93N at 2.434mm
+3.25 192.50N at 2.547mm
+3.30 195.33N at 2.603mm
+3.35 203.27N at 2.716mm
+3.40 212.20N at 2.864mm
+3.45 223.33N at 3.063mm (wire break)
+3.50 24.38N at 7.720mm
+3.55 23.07N at 16.975mm
+4.00 33.32N at 30.581mm
+4.05 35.55N at 42.756mm
+4.10 34.96N at 54.911mm
+4.15 32.28N at 64.362mm (limit reached)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
