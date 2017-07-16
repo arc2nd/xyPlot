@@ -129,8 +129,10 @@ def pgPlot(options):
                         xy.append( (data_dict[this_key][0][i], data_dict[this_key][1][i]) )
                     #line_graph.add(this_key, data_dict[this_key][1])
                     line_graph.add(this_key, xy)
-
-            svg_str = line_graph.render()
+            try:
+                svg_str = line_graph.render()
+            except:
+                print(sys.exc_info())
 
     if svg_str:
         svg_path = '/home/james/scripts/test.svg'
