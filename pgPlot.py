@@ -25,7 +25,6 @@ def parse_args(allArgs):
     parser.add_option("-t", "--title", dest="title", help="The title of the graph", metavar="TITLE", default="Plot Title")
     parser.add_option("-p", "--path", dest="path", help="The path of the graph you want to output", metavar="PATH")
     parser.add_option("-l", "--legend", action="store_true", dest="legend", help="Add a legend to the graph")
-    parser.add_option("-k", "--xkcd", action="store_true", dest="xkcd", help="Use the XKCD style")
     parser.add_option("-s", "--swap", action="store_true", dest="swap", help="Swap X and Y data sets")
     parser.add_option('--wi', '--width', dest='width', help='png file width in inches', default=5)
     parser.add_option('--he', '--height', dest='height', help='png file height in inches', default=4)
@@ -126,16 +125,17 @@ def pgPlot(options):
                     xy = []
                     i = 0
                     for i in range(0, len(data_dict[this_key][1])):
-                        xy.append( (data_dict[this_key][0][i], data_dict[this_key][1][i]) )
+                        #xy.append( (data_dict[this_key][0][i], data_dict[this_key][1][i]) )
+                        xy.append( (i, data_dict[this_key][1][i]) )
                     #line_graph.add(this_key, data_dict[this_key][1])
-                    line_graph.add(this_key, xy)
+                    line_graph.add(this_key, xy, show_dots=False)
             try:
                 svg_str = line_graph.render()
             except:
                 print(sys.exc_info())
 
     if svg_str:
-        svg_path = '/home/james/scripts/test.svg'
+        svg_path = '/home/james/scripts/{0}.svg'.format(os.path.basename(options.data).split('_')[0])
         fp = open(svg_path, 'w+')
         fp.write(svg_str)
         fp.close()
