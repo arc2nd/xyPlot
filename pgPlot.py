@@ -145,27 +145,58 @@ def pgPlot(options):
                 )
             date_graph.title = str(options.label)
             for this_key in data_dict:
+                print(this_key)
                 i=0
                 pnts = []
+                #print(data_dict[this_key])
                 if len(data_dict[this_key][0]) != len(data_dict[this_key][1]):
+                    #print('len x:{0} y:{1}'.format(len(data_dict[this_key][0]), len(data_dict[this_key][1])))
                     calc_start = len(data_dict[this_key][0]) - len(data_dict[this_key][1])
+                    #print(calc_start)
                     data_dict[this_key][0] = data_dict[this_key][0][calc_start:]
-                    print(data_dict[this_key])
-                    print('len x:{0} y:{1}'.format(len(data_dict[this_key][0]), len(data_dict[this_key][1])))
+                    #print(data_dict[this_key])
+                    #print('len x:{0} y:{1}'.format(len(data_dict[this_key][0]), len(data_dict[this_key][1])))
+
                 for this_date in data_dict[this_key][0]:
                     datetime_points = []
+                    #print(this_date)
                     month, day, year = this_date.split('-')
                     day = int(day)
                     month = int(month)
                     year = int('20{0}'.format(year))
-                    print("{0}-{1}-{2}".format(year, month, day))
+                    #print("{0}-{1}-{2}".format(year, month, day))
                     this_dt = datetime(year, month, day)
                     pnts.append((this_dt, data_dict[this_key][1][i]))
                     i += 1
-                print(pnts)
-                print "\n"
+                #print(pnts)
+                #print "\n"
+
                 if '.sample' in this_key.lower():
+                    import calendar
                     print("I'm a sample")
+                    #convert my datetimes to int timestamps
+                    xValues = []
+                    for dt in pnts:
+                        ts = calendar.timegm(dt[0].timetuple())
+                        #print('date: {0}\ntime: {1}'.format(dt[0].strftime('%Y-%m-%d'), ts))
+                        xValues.append(ts)
+                    #interpolate my timestamps
+                    from scipy.interpolate import splev, splrep
+                    i = 0
+                    yValues = data_dict[this_key][1]
+                    tck = splrep(xValues, yValues)
+                    x2 = np.linspace(xValues[0], xValues[-1], 200)
+                    y2 = splev(x2, tck)
+
+                    #convert my interpvalues back into datetime objects
+                    xy2 = []
+                    i=0
+                    interp_pnts = []
+                    for i in range(0, len(x2)):
+                        interp_dt = datetime.utcfromtimestamp(x2[i])
+                        interp_pnts.append( (interp_dt, y2[i]) )
+                    #print(interp_pnts)   
+                    date_graph.add(this_key, interp_pnts, show_dots=False)
                 else:
                     date_graph.add(this_key, pnts, show_dots=False)
             #try:
