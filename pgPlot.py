@@ -133,12 +133,52 @@ def pgPlot(options):
                 svg_str = line_graph.render()
             except:
                 print(sys.exc_info())
-
+        if options.graphType.lower() == 'date':
+            from datetime import datetime
+            date_graph = pygal.DateTimeLine(config, 
+                dynamic_print_values=True, 
+                show_x_guides=options.grid, 
+                show_y_guides=options.grid, 
+                x_label_rotation=40, 
+                truncate_label=-1, 
+                x_value_formatter=lambda dt: dt.strftime("%Y-%m-%d")
+                )
+            date_graph.title = str(options.label)
+            for this_key in data_dict:
+                i=0
+                pnts = []
+                if len(data_dict[this_key][0]) != len(data_dict[this_key][1]):
+                    calc_start = len(data_dict[this_key][0]) - len(data_dict[this_key][1])
+                    data_dict[this_key][0] = data_dict[this_key][0][calc_start:]
+                    print(data_dict[this_key])
+                    print('len x:{0} y:{1}'.format(len(data_dict[this_key][0]), len(data_dict[this_key][1])))
+                for this_date in data_dict[this_key][0]:
+                    datetime_points = []
+                    month, day, year = this_date.split('-')
+                    day = int(day)
+                    month = int(month)
+                    year = int('20{0}'.format(year))
+                    print("{0}-{1}-{2}".format(year, month, day))
+                    this_dt = datetime(year, month, day)
+                    pnts.append((this_dt, data_dict[this_key][1][i]))
+                    i += 1
+                print(pnts)
+                print "\n"
+                if '.sample' in this_key.lower():
+                    print("I'm a sample")
+                else:
+                    date_graph.add(this_key, pnts, show_dots=False)
+            #try:
+            svg_str = date_graph.render()
+            #except:
+            #    print(sys.exc_info())
+    
     if svg_str:
         svg_path = '/home/james/scripts/{0}.svg'.format(os.path.basename(options.data).split('_')[0])
         fp = open(svg_path, 'w+')
         fp.write(svg_str)
         fp.close()
+        print('wrote: {0}'.format(svg_path))
 
 if __name__ == '__main__':
     options, args = parse_args(sys.argv[1:])
